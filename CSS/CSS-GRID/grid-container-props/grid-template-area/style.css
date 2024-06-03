@@ -1,0 +1,46 @@
+html,body{
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    height: 50%;
+    margin: 50px;
+    border: 1px solid black;
+
+    /* grid parent's properties */
+
+    /* This properties are used to define the grid structure like how many columns and rows our grid will have */
+
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%; */
+
+    /* we can give name to the lines using [] and one line can have multiple names*/
+    grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-3-end];
+    grid-template-rows:[row-1-start] 50% [row-1-end row-2-start] 50% [row-2-end];
+}
+
+.item-1{
+    background-color: aqua;
+    /* specifying where items should be placed using grid-column-start and grid-column-end */
+    /* grid-column-start : col-2-start;
+    grid-column-end : col-2-end;
+    grid-row-start : 1;
+    grid-row-end : 3; */
+    /* short hand for all this properties are */
+    grid-column: col-2-start / col-2-end;
+    grid-row : 1 / 3;
+    
+}
+.item-2{
+    background-color: burlywood;
+}
+.item-3{
+    background-color:blanchedalmond;
+}
+.item-4{
+    background-color:blueviolet;
+}
+.item-5{
+    background-color: steelblue;
+}
