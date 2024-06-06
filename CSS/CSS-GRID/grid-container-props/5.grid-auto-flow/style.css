@@ -1,0 +1,39 @@
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    height:180px;
+    margin: 50px;
+    border: 1px solid black;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 90px 90px;
+
+    /* *by default the grid are placed one beside other in row flow when we don't explicitly define the grid start/end track, we can change this behaviour using grid-auto-flow */
+
+    /* *this will make sure 1'st column will be filled then 2nd column and so one */
+    /* grid-auto-flow: row (default)*/
+    grid-auto-flow:column;
+}
+
+.item-1{
+    background-color: aqua;
+}
+.item-2{
+    background-color: burlywood;
+}
+.item-3{
+    background-color:blanchedalmond;
+}
+.item-4{
+    background-color:blueviolet;
+}
+.item-5{
+    background-color: steelblue;
+}
+.item-6{
+    background-color: darkgreen;
+  
+}
