@@ -4,7 +4,11 @@
 
 ### Simple Selectors
 
+#### -> class , id , universal and element selectors
+
 ### Combinators selectors
+
+#### -> descendant selectors (space), child selector (>), adjacent sibling selectors (+), general sibling selectors (~)
 
 ### Pseudo-class selector
 
