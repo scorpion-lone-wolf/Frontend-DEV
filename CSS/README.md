@@ -1,4 +1,6 @@
-# CSS 
+# CSS
+
+## CSS Selectors
 
 ## CSS GRID
 
@@ -22,4 +24,4 @@
 
 ### Special functions and keywords
 
-#### -> 'minmax()' , 'fit-content()' and 'repeat()' 
+#### -> 'minmax()' , 'fit-content()' and 'repeat()'
