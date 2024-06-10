@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Combinators</title>
+  </head>
+  <body>
+    <header>
+      <h1>Combinators Selector</h1>
+    </header>
+    <section>
+      <div>
+        <p>I m inside section>div>p</p>
+      </div>
+    </section>
+
+    <div>
+      <div class="myClass">
+        <p>I m inside div>div>p</p>
+      </div>
+      <div>
+        <!-- *im also adjacent sibling of div -->
+        <p>I m inside div>div>p</p>
+      </div>
+      <div>
+        <!-- *im also sibling of div but not adjacent sibling of div with class myClass but-->
+        <p>I m inside div>div>p</p>
+      </div>
+    </div>
+  </body>
+</html>
