@@ -1,0 +1,19 @@
+/* universal selector */
+*{
+    font-size: 1.5rem;
+}
+
+/* id selector */
+#myId{
+    background-color:aqua;
+}
+
+/* class selector */
+.myClass{
+    background-color:blanchedalmond;
+}
+
+/* element selector */
+p{
+    font-style: italic;
+}

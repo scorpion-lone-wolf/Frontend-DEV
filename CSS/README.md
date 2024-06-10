@@ -2,6 +2,16 @@
 
 ## CSS Selectors
 
+### Simple Selectors
+
+### Combinators selectors
+
+### Pseudo-class selector
+
+### Pseudo-element selector
+
+### Attributes selector
+
 ## CSS GRID
 
 ### grid containers properties
