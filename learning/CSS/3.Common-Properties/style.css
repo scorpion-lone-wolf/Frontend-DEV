@@ -9,8 +9,10 @@ html,body{
     height: 1250px;
 }
 .bg-image{
-
-    width : 50%;
+    /* * width:50% will add resposiveness but when we squish the image then it'w width will also be 50% which will make image squsih from side. To encounter this problem we use max-with and min-width */
+    /* width : 50%; */
+    max-width : 50%;
+    min-width: 450px;
     height: 50%;
     border: 1px solid violet;
 
@@ -22,5 +24,5 @@ html,body{
     background-attachment: local; */
 
     /* *shorthand for background property */
-    background: rgba(136, 133, 133, 0.1) url("./images/deer.jpg") center/cover no-repeat border-box scroll ;
+    background: rgba(136, 133, 133, 0.1) url("./images/deer.jpg") left top/contain no-repeat border-box scroll ;
 }
