@@ -14,6 +14,7 @@ html,body{
     max-width : 50%;
     min-width: 450px;
     height: 50%;
+    padding: 5px;
     border: 1px solid violet;
 
     /* background-image: url("./images/pic.jpg");
@@ -24,5 +25,7 @@ html,body{
     background-attachment: local; */
 
     /* *shorthand for background property */
-    background: rgba(136, 133, 133, 0.1) url("./images/deer.jpg") left top/contain no-repeat border-box scroll ;
+    background: rgba(136, 133, 133, 0.1) url("./images/deer.jpg") left top/contain no-repeat content-box scroll ;
+
+    outline: 10px dotted orange;
 }
