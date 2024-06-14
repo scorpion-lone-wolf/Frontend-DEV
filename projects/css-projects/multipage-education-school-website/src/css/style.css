@@ -13,30 +13,31 @@
 * We declared css varible inside :root(pseudo-class) which is used to target the root element of the document i.e html element.
 * When you define a css varible inside :root , you're essentially declaring global variables that can be accessed from anywhere inside your css stylesheet.
 */
-:root{
+:root {
     /* * Naming convension for css varibles starts with double hyphen(--) */
-    --color-primary:#6c63ff;
-    --color-success:#00bf8e;
-    --color-warning:#f7c94b;
-    --color-danger:#f75842;
-    --color-danger-varient:rgba(247,88,66,0.4);
-    --color-white:#fff;
-    --color-light:rgba(255,255,255,0.7);
-    --color-black:#000;
-    --color-bg:#1f2641;
-    --color-bg1:#2e3267;
-    --color-bg2:#424890;
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-varient: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
 
     /* *lg = large , md =medium , sm = small */
-    --container-width-lg:80%;
-    --container-width-md:90%;
-    --container-width-sm:94%;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
 
     /* * here we are specifying with all that transition effect should be applied to all properties that changes. We can be specific as well like eg; width,height 400ms ease; */
-    --transition : all 400ms ease ;
+    --transition: all 400ms ease;
 
 }
-body{
+
+body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.7;
     color: var(--color-white);
@@ -44,34 +45,42 @@ body{
 }
 
 /* * This is common class that most element will have to center the element, also it's width will vary based of desktop(lg),tab(md) and mobile(sm) width */
-.container{
-    width : var(--container-width-lg);
+.container {
+    width: var(--container-width-lg);
     margin: 0 auto;
 }
 
-section{
-    padding : 6rem 0;
+section {
+    padding: 6rem 0;
 }
 
-section h2{
+section h2 {
     text-align: center;
     margin-bottom: 4rem;
 }
 
 /* *defining the heading tags */
-h1,h2,h3,h4,h5{
-   line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
 }
-h1{
+
+h1 {
     font-size: 2.4rem;
 }
-h2{
+
+h2 {
     font-size: 2rem;
 }
-h3{
+
+h3 {
     font-size: 1.6rem;
 }
-h4{
+
+h4 {
     font-size: 1.3rem;
 }
 
@@ -81,18 +90,18 @@ a {
     color: var(--color-white);
 }
 
-li{
+li {
     /* *This will remove the bullet points from list(ul) that they have by default */
     list-style: none;
 }
 
-img{
-    width : 100%;
+img {
+    width: 100%;
     display: block;
     object-fit: cover;
 }
 
-.btn{
+.btn {
     display: inline-block;
     background-color: var(--color-white);
     color: var(--color-black);
@@ -102,19 +111,19 @@ img{
     transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
 }
 
-.btn-primary{
-   background-color: var(--color-danger);
-   color: var(--color-white);
+.btn-primary {
+    background-color: var(--color-danger);
+    color: var(--color-white);
 }
 
 /* ==================================================NAVBAR========================================== */
-nav{
+nav {
     background-color: transparent;
     /* *This will make sure that nav bar always take full width of the devices  */
     width: 100vw;
@@ -124,12 +133,14 @@ nav{
     top: 0;
     z-index: 11;
 }
+
 /* *change navbar style on scroll using javascript */
-.window-scroll{
+.window-scroll {
     background-color: var(--color-primary);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-.nav__container{
+
+.nav__container {
     /* *This will make the height of the nav__container to 5rem=100% of it's parent so that when align-items:cneter then it will be perfectly vertically centered */
     height: 100%;
     display: flex;
@@ -138,106 +149,163 @@ nav{
 }
 
 /* * This should be displayed only on mobiles & tablets */
-nav button{
+nav button {
     display: none;
 }
 
-.nav__menu{
+.nav__menu {
     display: flex;
     align-items: center;
     gap: 4rem;
 }
 
-.nav__menu a{
+.nav__menu a {
     font-size: 0.9rem;
     transition: var(--transition);
 }
 
-.nav__menu a:hover{
+.nav__menu a:hover {
     color: var(--color-bg2);
 }
 
 /* ==================================================HEADER========================================== */
-header{
+header {
     /* Here we could use positin as relative and top: 5rem */
     margin: 5rem 0;
     height: 70vh;
     overflow: hidden;
 }
 
-.header__container{
+.header__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 5rem;
     height: 100%;
 }
+
 .header__left p {
     margin: 1rem 0 2.4rem;
 }
 
+.header__right {
+    transition: var(--transition);
+}
+
+.header__right:hover {
+    scale: 1.05;
+}
+
 /* ==================================================Categories========================================== */
-.categories{
+.categories {
     background-color: var(--color-bg1);
     height: 29rem;
 }
-.categories h1{
+
+.categories h1 {
     line-height: 1;
     margin-bottom: 3rem;
 }
-.categories__container{
+
+.categories__container {
     display: grid;
     grid-template-columns: 40% 60%;
 }
-.categories__left{
+
+.categories__left {
     margin-right: 4rem;
 }
-.categories__left p{
+
+.categories__left p {
     margin: 1rem 0 3rem;
 }
-.categories__right{
+
+.categories__right {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
 }
-.category{
+
+.category {
     background-color: var(--color-bg2);
     padding: 2rem;
     border-radius: 2rem;
     transition: var(--transition);
 }
 
-.category:hover{
-    box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
     scale: 1.1;
 }
 
-.category:nth-child(2) .category__icon{
+.category:nth-child(2) .category__icon {
     background-color: var(--color-danger);
 }
 
-.category:nth-child(3) .category__icon{
+.category:nth-child(3) .category__icon {
     background-color: var(--color-success);
 }
 
-.category:nth-child(4) .category__icon{
+.category:nth-child(4) .category__icon {
     background-color: var(--color-warning);
 }
 
-.category:nth-child(5) .category__icon{
+.category:nth-child(5) .category__icon {
     background-color: var(--color-success);
 }
 
-.category__icon{
+.category__icon {
     background-color: var(--color-primary);
     padding: 0.7rem;
     border-radius: 0.9rem;
 }
-.category h5{
+
+.category h5 {
     margin: 2rem 0 1.5rem;
 }
+
 .category p {
     font-size: 0.85rem;
     text-align: justify;
+}
+
+/* ==================================================POPULAR COURSES========================================== */
+
+.courses {
+    margin: 12rem;
+}
+
+.courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+
+}
+
+.course {
+    border-radius: 1rem;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.course:hover .course__info {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.course__image img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.course__info {
+    padding: 2rem;
+    background-color: var(--color-bg1);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.course__info p {
+    font-size: 0.9rem;
+    margin: 2rem 0;
 }
