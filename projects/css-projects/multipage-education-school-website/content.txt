@@ -1,0 +1,11 @@
+Things that we are going to learn through this small project:
+
+1. CSS Variables
+2. CSS Grid and Flexbox
+3. BEM(Block Element Modifier)
+4. CSS units for responsive design (vh,vw,fr,%)
+5. Form submission with spam Protection
+6. CSS Transitions and Animations
+7. swiperJS for slides
+8. CSS Media queries
+9. 
