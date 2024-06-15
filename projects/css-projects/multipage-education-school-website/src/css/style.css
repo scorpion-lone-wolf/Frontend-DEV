@@ -199,7 +199,7 @@ header {
 /* ==================================================Categories========================================== */
 .categories {
     background-color: var(--color-bg1);
-    height: 29rem;
+    height: 32rem;
 }
 
 .categories h1 {
@@ -273,7 +273,7 @@ header {
 /* ==================================================POPULAR COURSES========================================== */
 
 .courses {
-    margin: 12rem;
+    margin: 15rem 0 0 5rem;
 }
 
 .courses__container {
@@ -286,7 +286,6 @@ header {
 
 .course {
     border-radius: 1rem;
-    transition: var(--transition);
     text-align: center;
 }
 
@@ -303,9 +302,126 @@ header {
     padding: 2rem;
     background-color: var(--color-bg1);
     border-radius: 0 0 1rem 1rem;
+    transition: var(--transition);
 }
 
 .course__info p {
     font-size: 0.9rem;
     margin: 2rem 0;
+}
+
+/* ================================================== FAQs ========================================== */
+
+.faqs{
+    background-color: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+}
+
+ .faqs__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq{
+    padding: 2rem;
+    background-color: var(--color-primary);
+    display: flex;
+    height:fit-content;
+    gap: 1.4rem;
+    cursor: pointer;
+}
+
+.faq h4{
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.faq__icon{
+    font-size: 1.2rem;
+}
+
+.faq p{
+    margin-top: 0.8rem;
+    display: none;
+}
+.faq.open p{
+    display: block;
+}
+
+/* ================================================== Testimonials ========================================== */
+
+.testimonial{
+    padding-top: 2rem;
+}
+
+.avatar{
+    width: 6rem;
+    height: 6rem;
+    /* *This will make circle */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+}
+
+.testimonial__info{
+    text-align: center;
+}
+
+.testimonial__body{
+    background-color: var(--color-primary);
+    margin-top: 3rem;
+    padding: 2rem;
+    position: relative;
+}
+/* displaying upward arrow sign type */
+.testimonial__body::before{
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    background-image: linear-gradient(130deg,transparent,var(--color-primary),var(--color-primary));
+    position: absolute;
+    top: 0;
+    left :50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+/* ================================================== FOOTER ========================================== */
+footer{
+    background-color: var(--color-bg1);
+    padding-top: 5rem;
+}
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+
+.footer__container > div h4{
+    margin-bottom: 1.2rem;;
+} 
+
+.footer__1 p{
+    margin-bottom: 2rem;
+}
+
+footer ul li{
+    margin-bottom: 0.7rem;
+    transition: var(--transition);
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer__socials{
+    display: flex;
+    gap:2rem;
+    font-size: 1.2rem;
+    margin-top:2rem;
+}
+
+.footer__copyright{
+    text-align: center;
 }
