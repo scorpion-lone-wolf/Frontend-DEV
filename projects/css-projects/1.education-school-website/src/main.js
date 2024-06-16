@@ -24,3 +24,24 @@ faqElements.forEach(element => {
 
     });
 });
+
+// * open the navbar button
+// select the hamburger menu button
+const menuHamButton = document.querySelector("#open-menu-btn");
+menuHamButton.addEventListener('click', () => {
+    const menu = document.querySelector(".nav__menu");
+    const menuCloseButton = document.querySelector("#close-menu-btn");
+    menuCloseButton.style.display = 'block';
+    menuHamButton.style.display = 'none';
+    menu.style.display = 'flex';
+});
+
+// * close the navbar button
+const menuCloseButton = document.querySelector("#close-menu-btn");
+menuCloseButton.addEventListener('click', () => {
+    const menu = document.querySelector(".nav__menu");
+    const menuHamButton = document.querySelector("#open-menu-btn");
+    menuCloseButton.style.display = 'none';
+    menuHamButton.style.display = 'block';
+    menu.style.display = 'none';
+});
