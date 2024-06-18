@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* *===================================================================== Display Element============================================================ */
+
+
+.display-properties div,
+span {
+    margin: 1rem;
+    border: 2px solid black;
+}
+
+.display-properties div {
+    /* *The default display property of div is block as it is a block level element */
+    /* * It respect every thing but it takes whole space even if we define its width,meaning its width is set but it won't let any other element to come its side, they are pushed down  */
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    width: 20rem;
+}
+
+.inline {
+    /* * for span default is inline only*/
+    display: inline;
+    /* *When display is inline impliciply or we do explicitly , it doesn't respect height and width (means this below setting of height and width has no effect on span tag) */
+    width: 500px;
+    height: 500px;
+    /* *Also it doesn't repect top and bottom margin & padding */
+    /* *This will make margin-left and margin-right to 20rem but won't effect top and bottom margin */
+    margin: 20rem;
+}
+
+.inline-block {
+    /* *We are making this as inline-block so it respect every properties just like block level elements does but the difference is that it don't push other element down. Other elements can come and sit beside them */
+    display: inline-block;
+    width: 500px;
+    height: 100px;
+}
+
+/* *===================================================================== Positioned Element============================================================ */
+body {
+    height: 2020px;
+}
+
+.positioned {
+    margin: 2rem;
+    padding: 2rem;
+    border: 2px solid black;
+}
+
+.fixed {
+    /* * This make the element out of documnet flow and fixed relative to viewport */
+    background-color: yellow;
+    position: fixed;
+    /* *This makes element distance from top of the view port to 0 */
+    top: 0;
+}
+
+.relative {
+    /* *This make element realtive to its actual position(the position which is set by normal document flow) */
+    position: relative;
+    /* *This makes the element 10px down from top of its actual position.They make overlap other element as well during this */
+    top: 10px;
+}
+
+.position-properties {
+    /* position: relative; */
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.absolute {
+    /* *It is relative to its nearest positioned ancestor if there are else the root html element */
+    background-color: pink;
+    position: absolute;
+    top: 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
