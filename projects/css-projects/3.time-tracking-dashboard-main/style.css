@@ -207,3 +207,7 @@ section {
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+a.active {
+    color: var(--color-text-hover);
+}
