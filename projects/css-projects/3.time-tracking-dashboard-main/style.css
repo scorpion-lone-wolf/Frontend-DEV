@@ -199,15 +199,103 @@ section {
     color: var(--color-text);
 }
 
-.attribution {
-    min-width: 15rem;
-    color: white;
-    position: absolute;
-    bottom: 0.5rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
 a.active {
     color: var(--color-text-hover);
+}
+
+/* *For tablet */
+@media only screen and (max-width:1024px) {
+    section {
+        max-width: 40rem;
+        min-width: 35rem;
+        min-height: 55rem;
+        max-height: 100%;
+        margin-top: 3rem;
+        /* *reset the transform property */
+        transform: none;
+    }
+
+    .dashboard__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .dashboard__maincard {
+        grid-column: 1 / 2;
+        height: 1fr;
+    }
+}
+
+/* *For smartphone */
+@media only screen and (max-width:570px) {
+
+    section {
+        max-width: 32rem;
+        min-width: 23rem;
+        min-height: 55rem;
+        margin-top: 3rem;
+    }
+
+    .dashboard__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 10rem);
+    }
+
+    .dashboard__maincard {
+        height: 10rem;
+    }
+
+    .work-card {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 10rem;
+    }
+
+    .play-card,
+    .study-card,
+    .exercise-card,
+    .social-card,
+    .selfcare-card {
+        height: 10rem;
+    }
+
+    .card__info-time,
+    .card__info-time p {
+        margin-top: 0;
+        display: inline-block;
+    }
+
+    .card__info-status {
+        display: inline-block;
+        margin-right: 0;
+        position: absolute;
+        right: 1rem;
+        bottom: 1.2rem;
+    }
+
+    .dashboard__maincard-top {
+        position: relative;
+    }
+
+    .dashboard__maincard-top-image {
+        width: 4rem;
+        margin-top: 1rem;
+    }
+
+    .dashboard__maincard-top-info {
+        position: absolute;
+        left: 7rem;
+        top: 0;
+    }
+
+    .dashboard__maincard-top-name p {
+        font-size: 1.3rem;
+        width: max-content;
+    }
+
+    .dashboard__maincard-bottom {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
 }
