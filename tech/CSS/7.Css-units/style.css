@@ -1,0 +1,47 @@
+html {
+    font-size: 26px;
+}
+
+
+.px-unit {
+    font-size: 12px;
+}
+
+/* relative to root / html font size */
+.rem-unit {
+    font-size: 2rem;
+}
+
+.em-unit {
+    font-size: 2px;
+}
+
+/* relative to its parent font size */
+.em-unit p {
+    font-size: 6em;
+}
+
+/* relative to the viewport size/ size of the screen */
+
+.viewport-units p:nth-child(1) {
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+}
+
+.viewport-units p:nth-child(2) {
+    width: 100dvw;
+    height: 10dvh;
+    background-color: aqua;
+}
+
+.percentage-units {
+    width: 50%;
+}
+
+/* relative to the %of parent */
+
+.percentage-units p {
+    width: 100%;
+    background-color: blueviolet;
+}
