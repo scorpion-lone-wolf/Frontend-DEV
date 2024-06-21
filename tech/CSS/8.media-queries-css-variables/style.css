@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+}
+
+/* defining global css variables */
+/* *note css variable should always start with -- (double dashed) */
+:root {
+    --color-blue: rgb(68, 68, 235);
+    --color-yellow: rgb(212, 202, 54);
+}
+
+.container {
+    background-color: var(--color-blue);
+    width: 50%;
+    height: 50%;
+}
+
+@media only screen and (max-width:455px) {
+    .container {
+        background-color: var(--color-yellow);
+    }
+}
