@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: red;
+    margin: 2rem;
+    border: 2px solid black;
+    height: 50rem;
+    display: flex;
+
+    /*  *by default it is row other values = row | row-reverse | column | column-reverse*/
+    flex-direction: row;
+    /* *default is nowrap */
+    flex-wrap: npwrap;
+    /* *the shorthand for direction and wrapping is flex-flow */
+    flex-flow: row nowrap;
+
+    /* *THis works in main-axis direaction which is set by flex-direction */
+    justify-content: space-evenly;
+
+    /* *default it is stretch  */
+    align-items: center;
+
+    /* *working with flex elements in multile lines i.e we have flex-wrap:wrap */
+    align-content: space-between;
+
+    /* * gap: <row-gap> <column-gap>  */
+    gap: 2rem;
+
+}
+
+.container__element {
+    border: 2px solid teal;
+}
+
+.element-2 {
+    /* *default value of order for all elements is 0; the heigher the order the last it will be */
+    order: 1;
+
+    /* * This sets the initial size i.e width/height of an particular element based on main-axis; i.e if main axis is row then it set width else it set height */
+    /* *value = auto(max-content) | min-content | units */
+    flex-basis: 4rem;
+
+    flex-grow: 3;
+
+    flex-shrink: 0;
+
+    /* *short hand */
+    flex: 3 0 4rem;
+
+    /* It override the  alignment set by align-items*/
+    align-self: flex-end;
+}
