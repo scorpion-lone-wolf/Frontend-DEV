@@ -24,7 +24,9 @@ Step 4 : git commit -m "Your message regarding changes"
 
 Step 5 : We have to add remote repository so that this changes are pushed to that repository
         -> a : git remote add origin <remote:url> => This will link the remote repository to you current repository.
-        
-        -> b : git pull origin <branch-name> --allow-unrelated-histories => Before push we have to pull first. The flag allow to merge two branches that doesn't share common/related histories.
 
-        -> c : git push origin <branch-name>  
+        -> b : git config pull.rebase false => This will set the reabse to false and will apply merge strategy.
+        
+        -> c : git pull origin <branch-name> --allow-unrelated-histories => Before push we have to pull first. The flag allow to merge two branches that doesn't share common/related histories.
+
+        -> d : git push origin <branch-name>  
