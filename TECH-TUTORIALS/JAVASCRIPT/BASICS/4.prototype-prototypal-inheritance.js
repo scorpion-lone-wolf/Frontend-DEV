@@ -19,7 +19,6 @@ function Child(name, age, height) {
 
 // creating inheritance hierarchy
 Child.prototype = Object.create(Parent.prototype);
-Child.prototype = Object.create(Parent.prototype);
 
 Child.constructor = Child;
 
