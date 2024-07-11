@@ -1,3 +1,4 @@
+const fs = require('fs');
 // * Map
 
 const map = new Map();
@@ -38,3 +39,33 @@ console.log("Arrays ", arr);
 console.log("Sets ", set); // unique elemnets from an array
 
 
+
+// async function download() {
+//     try {
+//         const response = await fetch("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+//         const readBuffer = await response.arrayBuffer();
+//         const uint8Array = new Uint8Array(readBuffer);
+//         const writeBuffer = Buffer.from(uint8Array);
+//         fs.writeFile("hello.jpg", writeBuffer, (err) => {
+//             if (err) {
+//                 console.error('Error saving file:', err);
+//             } else {
+//                 console.log('File saved:', "hello.jpg");
+//             }
+//         });
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+// download();
+
+const ab = new ArrayBuffer(2); // create an arraybuffer of 2 bytes = 8 bit + 8 bit
+const view = new DataView(ab);
+view.setInt8(0, 42); // writing 42 in first 8 bit i.e first byte 
+view.setInt8(1, 100); // writing 100 in second 8 bit i.e second byte
+
+const value1 = view.getInt8(0); // Read the value from the first byte
+const value2 = view.getInt8(1); // Read the value from the second byte
+
+console.log(value1); // Output: 42
+console.log(value2); // Output: 100
