@@ -91,7 +91,7 @@ body {
   font-weight: 500;
 }
 
-.menu > p {
+.menu>p {
   font-size: 1.5rem;
   text-align: center;
   line-height: 1.6;
@@ -101,7 +101,7 @@ body {
 .pizzas {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 4.8rem;
 }
 
